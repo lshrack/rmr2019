@@ -46,10 +46,10 @@ public class BallManip extends Component
         
         //Changes settings on the encoder. More specifics here: https://wpilib.screenstepslive.com/s/currentCS/m/java/l/599717-encoders-measuring-rotation-of-a-wheel-or-other-shaft
         
-        steve.setMaxPeriod(.1); //This is the maximum time in seconds before the device is considered not moving
+        //steve.setMaxPeriod(.1); //This is the maximum time in seconds before the device is considered not moving - recommended to just use minRate
+        //steve.setDistancePerPulse(5); //scale factor - unnecessary because this is already set in the constructor to 4x
+        //steve.setReverseDirection(true); //Sets the direction the encoder counts - unnecessary because this is already set in the constructor
         steve.setMinRate(10); //minimum rate before device is considered stopped; accounts for distance per pulse and scale factor
-        steve.setDistancePerPulse(5); //scale factor between 
-        steve.setReverseDirection(true); //Sets the direction the encoder counts
         steve.setSamplesToAverage(7); //Sets number of averages to sample to determine period.
         
         //Gonna be honest, i don't know what the hell those things are ^
